@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegando com Sabedoria Digital - Colégio Carbonell</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles and Animations -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 40px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Custom Scrollbar for nicer look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+    </style>
+
+    <script>
+        // Configuração de cores personalizadas do Carbonell para uso no Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        carbonell: {
+                            azulEscuro: '#2b3a6c',
+                            azulMarinho: '#1e2a4d',
+                            amarelo: '#f7b53b',
+                            branco: '#ffffff',
+                        },
+                        alert: {
+                            border: '#dc2626',
+                            bg: '#fef2f2',
+                            bgIcon: '#fee2e2',
+                            icon: '#b91c1c',
+                            title: '#991b1b',
+                            text: '#7f1d1d',
+                            button: '#16a34a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 pb-12 min-h-screen flex flex-col">
+
+    <!-- Header / Top Banner -->
+    <header class="text-white p-6 shadow-lg bg-carbonell-azulEscuro">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <!-- Logotipo -->
+                <img src="logo.png" alt="Colégio Carbonell" class="site-logo w-14 h-14 object-contain rounded-md">
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-carbonell-amarelo">Navegando com Sabedoria Digital</h1>
+                    <p class="text-white text-sm md:text-base opacity-90">Guia de Uso Ético para Colaboradores Carbonell</p>
+                </div>
+            </div>
+            <div class="bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/20 flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-5 h-5 text-carbonell-amarelo"></i>
+                <span class="font-semibold text-sm text-white">Prática Recomendada</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 mt-8 space-y-8 flex-grow w-full">
+        
+        <!-- The Hook: The Problem - RED ALERT SECTION -->
+        <section class="rounded-2xl shadow-[0_10px_25px_-5px_rgba(220,38,38,0.3)] border-4 overflow-hidden animate-fade-in-up transform transition-all hover:scale-[1.005] bg-alert-bg border-alert-border">
+            
+            <!-- Alert Banner -->
+            <div class="bg-red-600 text-white text-center py-2 font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                <i data-lucide="alert-triangle" class="w-6 h-6 animate-pulse"></i>
+                Atenção: Risco de Direitos Autorais
+                <i data-lucide="alert-triangle" class="w-6 h-6 animate-pulse"></i>
+            </div>
+
+            <div class="p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center">
+                <!-- Icon Section with pulsing effect -->
+                <div class="relative shrink-0">
+                    <div class="absolute inset-0 bg-red-400 rounded-full animate-ping opacity-20"></div>
+                    <div class="p-6 rounded-full shadow-md relative z-10 bg-alert-bgIcon">
+                        <i data-lucide="search" class="w-12 h-12 text-alert-icon"></i>
+                        <div class="absolute -top-1 -right-1 bg-white rounded-full border-2 border-white">
+                            <i data-lucide="x-circle" class="w-7 h-7 text-red-600 fill-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 leading-tight text-alert-title">
+                        Pare! Cuidado com o "Google Imagens e Youtube"
+                    </h2>
+                    <p class="leading-relaxed text-lg md:text-xl text-alert-text">
+                        Você sabia que nem toda imagem, música ou vídeo encontrado no Google pode ser usado livremente?
+                    </p>
+                    <div class="my-4 p-4 rounded-lg border-2 border-dashed border-red-300 bg-red-50 inline-block text-left w-full md:w-auto">
+                        <p class="font-semibold text-red-800 flex items-center gap-2 justify-center md:justify-start">
+                            <i data-lucide="alert-triangle" class="w-5 h-5 text-red-500"></i>
+                            O uso indevido de materiais com <strong>Direitos Autorais</strong> pode:
+                        </p>
+                        <ul class="mt-2 space-y-1 text-red-700 list-disc list-inside pl-4">
+                            <li>Bloquear seus vídeos e aulas.</li>
+                            <li>Derrubar postagens nas redes sociais.</li>
+                            <li>Gerar problemas legais graves para o colégio.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The Solution CTA -->
+            <div class="p-6 bg-white border-t-4 border-red-100 text-center rounded-b-xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-500 via-orange-400 to-red-500"></div>
+                <h3 class="font-bold text-xl mb-4 text-slate-800">
+                    Existe uma solução <span class="text-green-600 font-extrabold underline decoration-green-300 decoration-4 underline-offset-4">SEGURA e GRATUITA</span> para turbinar suas aulas:
+                </h3>
+                <a 
+                    href="https://pixabay.com/pt/" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    class="inline-flex items-center gap-3 text-white text-2xl font-extrabold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl ring-4 ring-green-200 hover:ring-green-300 group bg-alert-button hover:bg-green-700"
+                >
+                    Conheça o PIXABAY 
+                    <i data-lucide="external-link" class="w-7 h-7 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <p class="text-slate-500 text-sm mt-3 font-medium">
+                    Milhares de imagens, vídeos e músicas sem royalties!
+                </p>
+            </div>
+        </section>
+
+        <!-- 3 Column Grid Content -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+            <!-- Column 1: The Arsenal -->
+            <div class="bg-white rounded-xl border-t-4 shadow-lg overflow-hidden flex flex-col h-full transition-all hover:shadow-xl border-carbonell-azulEscuro">
+                <div class="p-4 border-b flex flex-col items-center text-center bg-carbonell-azulEscuro text-carbonell-amarelo border-white/20">
+                    <div class="mb-2 p-2 bg-white rounded-full shadow-sm">
+                        <!-- Custom Rocket SVG matching Lucide style -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f7b53b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg uppercase text-carbonell-amarelo">1. O Arsenal do Educador</h3>
+                    <span class="text-xs font-semibold opacity-75 text-carbonell-amarelo">(O que tem lá?)</span>
+                </div>
+                <div class="p-5 flex-1">
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                            <div class="p-2 rounded-md bg-white shadow-sm border border-slate-100 text-carbonell-azulEscuro">
+                                <i data-lucide="camera" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-slate-800 leading-tight">Imagens</div>
+                                <div class="text-xs text-slate-500">Alta resolução, fotos e vetores.</div>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                            <div class="p-2 rounded-md bg-white shadow-sm border border-slate-100 text-carbonell-azulEscuro">
+                                <i data-lucide="video" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-slate-800 leading-tight">Vídeos</div>
+                                <div class="text-xs text-slate-500">Clips curtos e fundos animados.</div>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                            <div class="p-2 rounded-md bg-white shadow-sm border border-slate-100 text-carbonell-azulEscuro">
+                                <i data-lucide="music" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-slate-800 leading-tight">Músicas</div>
+                                <div class="text-xs text-slate-500">Trilhas emocionantes para vídeos.</div>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                            <div class="p-2 rounded-md bg-white shadow-sm border border-slate-100 text-carbonell-azulEscuro">
+                                <i data-lucide="volume-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-slate-800 leading-tight">Efeitos Sonoros</div>
+                                <div class="text-xs text-slate-500">Perfeito para gamificação.</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mt-4 text-xs font-semibold p-2 rounded text-center text-carbonell-azulEscuro bg-[#2b3a6c1a]">
+                        Maioria do conteúdo gratuito e com licença permissiva!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: The Compass -->
+            <div class="bg-white rounded-xl border-t-4 shadow-lg overflow-hidden flex flex-col h-full transition-all hover:shadow-xl border-carbonell-azulEscuro">
+                <div class="p-4 border-b flex flex-col items-center text-center bg-carbonell-azulEscuro text-carbonell-amarelo border-white/20">
+                    <div class="mb-2 p-2 bg-white rounded-full shadow-sm">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-carbonell-amarelo"></i>
+                    </div>
+                    <h3 class="font-bold text-lg uppercase text-carbonell-amarelo">2. A Bússola da Prudência</h3>
+                    <span class="text-xs font-semibold opacity-75 text-carbonell-amarelo">(O que a licença diz?)</span>
+                </div>
+                <div class="p-5 flex-1 space-y-4">
+                    <!-- Safe Zone -->
+                    <div class="bg-white rounded-lg p-3 shadow-sm border border-green-200">
+                        <div class="flex items-center gap-2 mb-2 border-b border-green-100 pb-2">
+                            <div class="bg-green-500 text-white p-1 rounded font-bold text-xs">PODE</div>
+                            <span class="font-bold text-sm text-green-700">ZONA SEGURA</span>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 mt-1 shrink-0 text-green-500"></i>
+                                <span>Uso em projetos escolares e comerciais.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 mt-1 shrink-0 text-green-500"></i>
+                                <span>Modificar, editar e adaptar.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 mt-1 shrink-0 text-green-500"></i>
+                                <span>Usar sem atribuição obrigatória.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Danger Zone -->
+                    <div class="bg-white rounded-lg p-3 shadow-sm border border-red-200">
+                        <div class="flex items-center gap-2 mb-2 border-b border-red-100 pb-2">
+                            <div class="bg-red-500 text-white p-1 rounded font-bold text-xs">NÃO PODE</div>
+                            <span class="font-bold text-sm text-red-700">ZONA DE PERIGO</span>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i data-lucide="x-circle" class="w-4 h-4 mt-1 shrink-0 text-red-500"></i>
+                                <span>Venda direta sem modificação criativa.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i data-lucide="x-circle" class="w-4 h-4 mt-1 shrink-0 text-red-500"></i>
+                                <span>Implicar endosso de pessoas retratadas.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i data-lucide="x-circle" class="w-4 h-4 mt-1 shrink-0 text-red-500"></i>
+                                <span>Contextos difamatórios ou sensíveis.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: The Golden Rule -->
+            <div class="bg-white rounded-xl border-t-4 shadow-lg overflow-hidden flex flex-col h-full transition-all hover:shadow-xl border-carbonell-azulEscuro">
+                <div class="p-4 border-b flex flex-col items-center text-center bg-carbonell-azulEscuro text-carbonell-amarelo border-white/20">
+                    <div class="mb-2 p-2 bg-white rounded-full shadow-sm">
+                        <!-- Custom Lightbulb SVG matching Lucide style -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f7b53b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+                            <path d="M9 18h6"/>
+                            <path d="M10 22h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg uppercase text-carbonell-amarelo">3. A Regra de Ouro</h3>
+                    <span class="text-xs font-semibold opacity-75 text-carbonell-amarelo">(Sabedoria Digital)</span>
+                </div>
+                <div class="p-5 flex-1">
+                    <div class="space-y-6">
+                        <div class="group">
+                           <div class="flex items-center gap-2 mb-2">
+                             <i data-lucide="eye" class="w-6 h-6 text-carbonell-azulEscuro"></i>
+                             <h4 class="font-bold text-slate-800">OLHO VIVO NA FONTE</h4>
+                           </div>
+                           <p class="text-sm text-slate-600 bg-white p-3 rounded-lg shadow-sm">
+                             Verifique sempre o box de <strong>"Licença"</strong> na página da mídia. Algumas músicas ou vídeos específicos podem pedir crédito na descrição.
+                           </p>
+                        </div>
+         
+                        <div class="group">
+                           <div class="flex items-center gap-2 mb-2">
+                             <i data-lucide="heart-handshake" class="w-6 h-6 text-carbonell-amarelo"></i>
+                             <h4 class="font-bold text-slate-800">ATITUDE EDUCADORA</h4>
+                           </div>
+                           <p class="text-sm text-slate-600 bg-white p-3 rounded-lg shadow-sm">
+                             <strong>Ética &gt; Obrigação.</strong> Mesmo não sendo obrigatório, <span class="font-bold text-carbonell-azulEscuro">DAR CRÉDITO</span> ensina cidadania digital para os estudantes. Cite a fonte quando possível!
+                           </p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="p-6 rounded-2xl text-center space-y-2 shadow-inner bg-carbonell-azulMarinho text-carbonell-branco">
+            <div class="flex justify-center mb-2">
+               <i data-lucide="graduation-cap" class="w-8 h-8 text-carbonell-amarelo"></i>
+            </div>
+            <p class="text-lg font-light italic">
+              "A tecnologia potencializa a aula, mas a <strong class="text-carbonell-amarelo">ÉTICA</strong> direciona o exemplo."
+            </p>
+            <p class="text-sm opacity-80">
+              Use com moderação e sabedoria! • Colégio Carbonell
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

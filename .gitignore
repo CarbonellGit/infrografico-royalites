@@ -1,0 +1,11 @@
+# Ignorar pasta de configuração do VS Code
+.vscode/
+
+# Ignorar arquivos de sistema do Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignorar logs e arquivos temporários
+*.log
+*.tmp
